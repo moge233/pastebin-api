@@ -218,10 +218,8 @@ class Pastebin:
 class PastebinPasteListParser(HTMLParser):
     '''
     A custom parser for the list_pastes method of the Pastebin API.
-    Call PastebinPasteListParser.feed(data) to create a list of tuples
-    of the parsed data.
-    Then, call the get_pastes() method to create a list of
-    PastebinPastes objects.
+    Mostly for internal use on the Pastebin.list_pastes method when
+    the parse flag is true.
     '''
     def __init__(self):
         HTMLParser.__init__(self)
