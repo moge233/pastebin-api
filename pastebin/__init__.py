@@ -29,6 +29,7 @@ class Pastebin:
         list_pastes
         list_trending_pastes
         delete_paste
+        get_user_information
     '''
 
     def __init__(self, api_key):
@@ -61,7 +62,7 @@ class Pastebin:
 
     def login(self, user_name, user_password):
         '''
-        Use the Pastebin members system to login
+        Use the Pastebin members system to login.
 
         args:
             user_name (bytes): the user name to login to
@@ -139,7 +140,7 @@ class Pastebin:
         '''
         Create a new logged in paste. Must call Pastebin.login first.
         Calls create_paste() method with user_key keyword set to
-        self.user_key
+        self.user_key.
 
         args:
             paste_code (bytes): the code to paste to Pastebin
@@ -353,7 +354,7 @@ class PastebinUserParser(HTMLParser):
     '''
     A custom parser for the get_ user_information method of the
     Pastebin API.
-    Mostly for internal use on the Pastebin.get_ user_information
+    Mostly for internal use on the Pastebin.get_user_information
     method when the parse flag is true.
     '''
     def __init__(self):
@@ -377,7 +378,7 @@ class PastebinUserParser(HTMLParser):
 
 class PastebinPaste:
     '''
-    This class encapsulates a Pastebin paste
+    This class encapsulates a Pastebin paste.
 
     attributes:
         paste_key (bytes)
@@ -414,6 +415,9 @@ class PastebinPaste:
 class PastebinUser:
     '''
     This class encapsulates a Pastebin user.
+
+    Some of these attributes are not necessarily set to anything
+    other than None.
 
     attributes:
         user_name (bytes)
