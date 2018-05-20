@@ -192,11 +192,13 @@ class Pastebin:
 
         returns:
             http.client.HTTPResponse object
+
+        raises:
+            AttributeError if self.user_key is not set
         '''
         if not self.user_key:
             raise AttributeError('''user_key is not set.
-                                 Login first to create a logged
-                                 in paste.''')
+                                 Login first to list user pastes.''')
         data = {
             'api_dev_key' : self.api_key,
             'api_user_key' : self.user_key,
@@ -250,6 +252,9 @@ class Pastebin:
 
         returns:
             http.client.HTTPResponse object
+
+        raises:
+            AttributeError if self.user_key is not set
         '''
         if not self.user_key:
             raise AttributeError('''user_key is not set.
@@ -284,7 +289,7 @@ class Pastebin:
         '''
         if not self.user_key:
             raise AttributeError('''user_key is not set.
-                                 Login first to delete a paste.''')
+                                 Login first to get user information.''')
         data = {
             'api_dev_key' : self.api_key,
             'api_user_key' : self.user_key,
