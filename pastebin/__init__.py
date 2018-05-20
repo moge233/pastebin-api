@@ -296,8 +296,8 @@ class Pastebin:
         if parse:
             response = response.read().decode(encoding='utf-8')
             parser = PastebinUserParser()
-            users = parser.get_user_information(response)
-            return users
+            user = parser.get_user_information(response)
+            return user
         return response
 
 
