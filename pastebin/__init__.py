@@ -246,16 +246,16 @@ class PastebinPasteListParser(HTMLParser):
         ind = 0
         while ind < n_pastes:
             paste = PastebinPaste(
-                self._tups[10*ind + 0][1],
-                self._tups[10*ind + 1][1],
-                self._tups[10*ind + 2][1],
-                self._tups[10*ind + 3][1],
-                self._tups[10*ind + 4][1],
-                self._tups[10*ind + 5][1],
-                self._tups[10*ind + 6][1],
-                self._tups[10*ind + 7][1],
-                self._tups[10*ind + 8][1],
-                self._tups[10*ind + 9][1]
+                self._tups[10*ind + 0][1], # paste_key
+                self._tups[10*ind + 1][1], # paste_date
+                self._tups[10*ind + 2][1], # paste_title
+                self._tups[10*ind + 3][1], # paste_size
+                self._tups[10*ind + 4][1], # paste_expire_date
+                self._tups[10*ind + 5][1], # paste_private
+                self._tups[10*ind + 6][1], # paste_format_long
+                self._tups[10*ind + 7][1], # paste_format_short
+                self._tups[10*ind + 8][1], # paste_url
+                self._tups[10*ind + 9][1]  # paste_hits
             )
             ind += 1
             pastes.append(paste)
