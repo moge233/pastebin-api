@@ -271,8 +271,8 @@ class Pastebin:
         Must be logged in first.
 
         kwargs:
-            parse (bool): If this is true, a list of PastebinPastes
-                          objects will be returned instead of the
+            parse (bool): If this is true, a PastebinUser
+                          object will be returned instead of the
                           usual HTTPResponse
 
         returns:
