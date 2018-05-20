@@ -25,6 +25,7 @@ class Pastebin:
         login
         create_paste
         create_logged_in_paste
+        list_pastes
     '''
 
     def __init__(self, api_key):
