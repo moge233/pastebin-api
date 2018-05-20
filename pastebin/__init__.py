@@ -302,17 +302,3 @@ class PastebinPaste:
 
 
 __all__ = ['Pastebin', 'PastebinPasteListParser', 'PastebinPaste']
-
-
-if __name__ == '__main__':
-    pb = Pastebin('d1ff169ea0e07ea2d1b13fca1dc264ef')
-    pb.login(b'mogan233', b'ilanimale09')
-
-    '''
-    resp = pb.create_logged_in_paste(b'print("hello world!")\n',
-                           paste_name=b'test.py',
-                           paste_format=b'python')
-    '''
-
-    resp = pb.list_pastes(parse=True)
-    print(resp[0])
