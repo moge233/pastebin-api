@@ -243,7 +243,7 @@ class Pastebin:
             return pastes
         return response
 
-    def delete_paste(self):
+    def delete_paste(self, paste_key):
         '''
         Delete pastes created by a user.
 
