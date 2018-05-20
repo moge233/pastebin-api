@@ -9,7 +9,6 @@ Pastebin API wrapper using urllib
 
 from html.parser import HTMLParser
 from http.client import HTTPException
-from re import search
 from urllib.request import urlopen
 from urllib.parse import urlencode
 
