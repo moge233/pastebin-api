@@ -4,3 +4,5 @@ python:
 install:
     - pip install .
     - pip install -r requirements.txt
+script:
+    - tests/test_pastebin.py
